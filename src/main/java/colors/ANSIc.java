@@ -99,7 +99,6 @@ public abstract class ANSIc {
      **************************************************************************/
     ANSITemplate template;
     String postfix ;
-    ANSITemplate perent;
     /***************************************************************************
      *                                                                         *
      * Constructors                                                            *
