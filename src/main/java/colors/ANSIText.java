@@ -63,7 +63,8 @@ public class ANSIText extends ANSIc {
         if(super.template != null)
             texts.addFirst(super.template.toString());
         String templateString =  super.template.toString();
-        Stream<Object> s =texts.stream().map(item -> {
+        Stream<Object> stream = texts.stream()
+                .map(item -> {
                     if(item.getClass().equals(ANSIText.class))  {
                         ((ANSIText)item).texts.addLast(templateString.toString());
                     }
@@ -71,7 +72,7 @@ public class ANSIText extends ANSIc {
                     return item;
                 }
         );
-        return s.collect(Collectors.toList());
+        return stream.collect(Collectors.toList());
     }
     @Override
     public String toString() {
