@@ -2,6 +2,7 @@ package colors;
 
 public class ANSITemplate {
     private final  ANSITextSetting[] settings;
+    static String START_CODE = "\33[";
     /***************************************************************************
      *                                                                         *
      * Constructors                                                            *
@@ -23,9 +24,9 @@ public class ANSITemplate {
     }
     @Override
     public String toString(){
-        StringBuilder value = new StringBuilder(ANSITextSetting.ZERO_WIDTH_SPACE);
+        StringBuilder value = new StringBuilder();
         if(settings != null) {
-            value.append("\033[");
+            value.append(ANSITemplate.START_CODE);
             for (int i = 0; i < settings.length; i++) {
                 value.append(settings[i].code());
                 if (i == settings.length - 1) {
