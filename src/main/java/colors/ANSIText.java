@@ -62,6 +62,8 @@ public class ANSIText extends ANSIc {
 //                                + ANSITextSetting.ZERO_WIDTH_SPACE
                                 + item
                                 + ANSIc.Reset.ALL.value();
+                    }else{
+//                         item  = ANSIc.Reset.All.value() + item;
                     }
                     item = item + postfix;
                     return item;
