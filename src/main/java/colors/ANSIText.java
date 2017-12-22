@@ -60,9 +60,8 @@ public class ANSIText extends ANSIc {
 
     @Override
     public List<Object> value() {
-        if(super.template != null)
-            texts.addFirst(super.template.toString());
         String templateString =  super.template.toString();
+        texts.addFirst(templateString);
         Stream<Object> stream = texts.stream()
                 .map(item -> {
                     if(item.getClass().equals(ANSIText.class))  {

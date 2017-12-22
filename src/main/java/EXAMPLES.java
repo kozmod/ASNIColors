@@ -14,6 +14,9 @@ import java.io.PrintWriter;
  */
 public class EXAMPLES {
     public static void main(String[] args) {
+        /**
+         * Simple write text.txt to check String
+         */
         ANSIc c =ANSIc.text(
                 "Blue ",
                 ANSIc.text(
@@ -29,7 +32,7 @@ public class EXAMPLES {
         );
         c.setTemplate(ANSIc.Color.BLUE);
         try {
-            PrintWriter pw = new PrintWriter(new File("test.txt"));
+            PrintWriter pw = new PrintWriter(new File("text.txt"));
             pw.write( c.toString());
             pw.flush();
             c.println();
@@ -41,8 +44,9 @@ public class EXAMPLES {
          */
         ANSIc.rows(
                 ANSIc.text("Green").setTemplate(ANSIc.Color.GREEN),
-                "Blur ", true,
-                ANSIc.text("is new row ", "yes ",0000,'r',999,6666),
+                "START TEXT ",
+                ANSIc.text("Blur ", true),
+                ANSIc.text("is new row ", "yes ",0000,'r',999).setTemplate(ANSIc.Color.RED),
                 ANSIc.text(
                         "Change color -> ",
                         ANSIc.text("PURPLE ").setTemplate(ANSIc.Color.PURPLE),
@@ -63,8 +67,10 @@ public class EXAMPLES {
          */
         new ANSIRows(new ANSITemplate(ANSIc.Color.BLUE),
                 new ANSIText(new ANSITemplate(ANSIc.Color.GREEN),"Green"),
+                "START TEXT ",
                 new ANSIText("Blur ", true),
-                new ANSIText("is new row ", " yes ", 000),
+                new ANSIText(new ANSITemplate(ANSIc.Color.RED),
+                        "is new row ", "yes ",0000,'r',999),
                 new ANSIText(
                         "Change color -> ",
                         new ANSIText(new ANSITemplate(ANSIc.Color.PURPLE), "PURPLE "),
