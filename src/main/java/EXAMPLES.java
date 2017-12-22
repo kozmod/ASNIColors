@@ -24,7 +24,8 @@ public class EXAMPLES {
                         (char)114,
                         (char)117,
                         (char)101,
-                        ANSIc.text("111"),
+                        ANSIc.text(" ", 8," ", false," ")
+                                .setTemplate(ANSIc.Color.GREEN,ANSIc.Property.BOLD),
                         11
                 ).setTemplate(ANSIc.Color.RED,ANSIc.Property.UNDERLINE),
                 1111

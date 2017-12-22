@@ -32,6 +32,7 @@
                         <index>true</index>
                         <manifest>
                             <addClasspath>true</addClasspath>
+                            <mainClass>EXAMPLES</mainClass>
                         </manifest>
                         <manifestEntries>
                             <mode>development</mode>
