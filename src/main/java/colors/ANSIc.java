@@ -1,5 +1,7 @@
 package colors;
 
+import java.util.List;
+
 public abstract class ANSIc {
     /***************************************************************************
      *                                                                         *
@@ -99,13 +101,14 @@ public abstract class ANSIc {
      **************************************************************************/
     ANSITemplate template;
     String postfix ;
+    ANSITemplate p;
     /***************************************************************************
      *                                                                         *
      * Constructors                                                            *
      *                                                                         *
      **************************************************************************/
     ANSIc() {
-        this.template = null;
+        this.template = new ANSITemplate();
         this.postfix  = ANSITextSetting.ZERO_WIDTH_SPACE;
     }
 
@@ -114,7 +117,7 @@ public abstract class ANSIc {
         this.postfix  = ANSITextSetting.ZERO_WIDTH_SPACE;
     }
     ANSIc(String postfix) {
-        this.template = null;
+        this.template = new ANSITemplate();
         this.postfix  = postfix;
     }
     ANSIc(ANSITemplate template, String postfix) {
@@ -126,7 +129,7 @@ public abstract class ANSIc {
      * ABSTRACT Methods                                                        *
      *                                                                         *
      **************************************************************************/
-    protected abstract Object[] value();
+    protected abstract List<Object> value();
     /***************************************************************************
      *                                                                         *
      * Methods                                                                 *
