@@ -23,7 +23,7 @@ public abstract class ANSIc {
         }
         private int value;
     }
-    public enum Back implements ANSITextSetting {
+    public enum Background implements ANSITextSetting {
         BLACK (40),  // BLACK
         RED   (41),    // RED
         GREEN (42),  // GREEN
@@ -32,7 +32,7 @@ public abstract class ANSIc {
         PURPLE(45), // PURPLE
         CYAN  (46),   // CYAN
         WHITE (47);  // WHITE
-        Back(int value){
+        Background(int value){
             this.value = value;
         }
         @Override
