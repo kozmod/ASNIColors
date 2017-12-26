@@ -139,13 +139,13 @@ public abstract class ANSIc {
      * System.out.print(this.toString())
      */
     public void print() {
-        System.out.print(this.toString());
+        System.out.print(this.toString() + ANSIc.Reset.All.value());
     }
     /**
      *  System.out.println(this.toString())
      */
     public void println() {
-        System.out.println(this.toString());
+        System.out.println(this.toString() + ANSIc.Reset.All.value();
     }
 
     /**
