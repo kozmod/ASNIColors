@@ -17,29 +17,35 @@ public class EXAMPLES {
         /**
          * Simple write text.txt to check String
          */
-        ANSIc c =ANSIc.text(
-                "Blue ",
+        ANSIc coloredOutput =ANSIc.text(
+                "Blue",
                 ANSIc.text(
+                        " ",
                         (char)116,
                         (char)114,
                         (char)117,
                         (char)101,
+                        " ",
                         ANSIc.text(" ", 8," ", false," ")
                                 .setTemplate(ANSIc.Color.GREEN,ANSIc.Property.BOLD),
                         11
-                ).setTemplate(ANSIc.Color.RED,ANSIc.Property.UNDERLINE),
+                ).setTemplate(ANSIc.Color.RED, ANSIc.Background.CYAN),
                 1111
 
         );
-        c.setTemplate(ANSIc.Color.BLUE);
+        coloredOutput.setTemplate(ANSIc.Color.BLUE, ANSIc.Property.UNDERLINE);
+        coloredOutput.println();
+        /**
+         * Save coloredOutput to file to check string...
+         */
         try {
-            PrintWriter pw = new PrintWriter(new File("text.txt"));
-            pw.write( c.toString());
+            PrintWriter pw = new PrintWriter(new File("colored-text.txt"));
+            pw.write( coloredOutput.toString());
             pw.flush();
-            c.println();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
         /**
          * Imperative
          */

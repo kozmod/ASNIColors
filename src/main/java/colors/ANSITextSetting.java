@@ -22,5 +22,4 @@ public interface ANSITextSetting {
                 +"m"
                 +ANSITextSetting.ZERO_WIDTH_SPACE;
     }
-
 }

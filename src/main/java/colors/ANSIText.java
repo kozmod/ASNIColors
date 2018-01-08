@@ -1,7 +1,6 @@
 package colors;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collector;
@@ -75,13 +74,14 @@ public class ANSIText extends ANSIc {
     }
     @Override
     public String toString() {
-        return this.value().stream()
+        return this.value()
+                .stream()
                 .collect(Collector.of(
                         StringBuilder::new,
                         (b ,s) -> b.append(s),
                         (b1, b2) -> b1.append(b2),
                         StringBuilder::toString
                         )
-                );
+                ) + Reset.ALL.value();
     }
 }
