@@ -2,7 +2,7 @@ package colors;
 
 public class ANSITemplate {
     private final  ANSITextSetting[] settings;
-    static String START_CODE = "\33[";
+    private static final String START_CODE = "\33[";
     /***************************************************************************
      *                                                                         *
      * Constructors                                                            *

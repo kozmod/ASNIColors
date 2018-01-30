@@ -1,7 +1,7 @@
 package colors;
 
 public interface ANSITextSetting {
-//    String ZERO_WIDTH_SPACE ="\u200b";
+//    String ZERO_WIDTH_SPACE_200 ="\u200b";
 //    String ZERO_WIDTH_SPACE_NEW_LINE ="\u200b\n";
     String ZERO_WIDTH_SPACE ="";
     String ZERO_WIDTH_SPACE_NEW_LINE ="\n";

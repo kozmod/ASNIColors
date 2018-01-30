@@ -15,6 +15,12 @@ import java.io.PrintWriter;
 public class EXAMPLES {
     public static void main(String[] args) {
         /**
+         * Start EXAMPLES
+         */
+        System.err.println("--------------   Start   ----------------\n"
+                         + "---------   System.err.println   --------\n"
+                         + "-----------------------------------------\n");
+        /**
          * Simple write text.txt to check String
          */
         ANSIc coloredOutput =ANSIc.text(
@@ -85,7 +91,11 @@ public class EXAMPLES {
                 ),
                 new ANSIText(
                         "Blue ",
-                        new ANSIText(new ANSITemplate(ANSIc.Color.RED,ANSIc.Property.UNDERLINE) ,
+                        new ANSIText(
+                                new ANSITemplate(
+                                        ANSIc.Color.RED,
+                                        ANSIc.Property.UNDERLINE
+                                ),
                                 (char)116,
                                 (char)114,
                                 (char)117,
@@ -93,6 +103,14 @@ public class EXAMPLES {
                         )
                 )
         ).println();
+        /**
+         * Checking that all changes canceled!!!
+         */
+        System.out.println("----------------- END -------------------\n"
+                         + "- Checking that all changes canceled!!! -\n"
+                         + "-----------------------------------------\n");
+
+
     }
 
 }

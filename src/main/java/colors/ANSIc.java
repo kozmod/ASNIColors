@@ -101,7 +101,6 @@ public abstract class ANSIc {
      **************************************************************************/
     ANSITemplate template;
     String postfix ;
-    ANSITemplate p;
     /***************************************************************************
      *                                                                         *
      * Constructors                                                            *
@@ -139,13 +138,13 @@ public abstract class ANSIc {
      * System.out.print(this.toString())
      */
     public void print() {
-        System.out.print(this.toString() + ANSIc.Reset.All.value());
+        System.out.print(this.toString() + ANSIc.Reset.ALL.value());
     }
     /**
      *  System.out.println(this.toString())
      */
     public void println() {
-        System.out.println(this.toString() + ANSIc.Reset.All.value();
+        System.out.println(this.toString() + ANSIc.Reset.ALL.value());
     }
 
     /**
