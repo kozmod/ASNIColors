@@ -109,8 +109,6 @@ public class EXAMPLES {
         System.out.println("----------------- END -------------------\n"
                          + "- Checking that all changes canceled!!! -\n"
                          + "-----------------------------------------\n");
-
-
     }
 
 }
