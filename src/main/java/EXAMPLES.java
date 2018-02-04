@@ -77,7 +77,8 @@ public class EXAMPLES {
                                 (char)101
                         ).template(ANSIc.Color.RED,ANSIc.Property.UNDERLINE)
                 )
-        ).template(ANSIc.Color.BLUE).println();
+        ).template(ANSIc.Color.BLUE)
+        .println();
         /***************************************************************************
          *                                                                         *
          * Declarative approach                                                    *
