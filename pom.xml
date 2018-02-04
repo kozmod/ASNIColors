@@ -7,10 +7,15 @@
     <groupId>com.ansi.console</groupId>
     <artifactId>asni-colors</artifactId>
     <version>0.2</version>
+    <packaging>jar</packaging>
     <!-- PROPERTIES -->
     <properties>
         <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <!-- ADDITIONAL INFORMATION -->
+    <name>ANSI Colors</name>
+    <description>This java library allows you to use ANSI escape codes to colored your console output.</description>
     <!-- BUILD -->
     <build>
         <plugins>
