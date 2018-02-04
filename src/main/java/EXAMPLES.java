@@ -53,7 +53,7 @@ public class EXAMPLES {
         }
 
         /**
-         * Imperative
+         * Imperative approach
          */
         ANSIc.rows(
                 ANSIc.text("Green").setTemplate(ANSIc.Color.GREEN),
@@ -76,7 +76,7 @@ public class EXAMPLES {
                 )
         ).setTemplate(ANSIc.Color.BLUE).println();
         /**
-         * Declarative stile
+         * Declarative approach
          */
         new ANSIRows(new ANSITemplate(ANSIc.Color.BLUE),
                 new ANSIText(new ANSITemplate(ANSIc.Color.GREEN),"Green"),
