@@ -20,10 +20,12 @@ public class EXAMPLES {
         System.err.println("--------------   Start   ----------------\n"
                          + "---------   System.err.println   --------\n"
                          + "-----------------------------------------\n");
-        /**
-         * Simple write text.txt to check String
-         */
-        ANSIc coloredOutput =ANSIc.text(
+        /***************************************************************************
+         *                                                                         *
+         * Simple write String to "text.txt" -> check String(codes)                *
+         *                                                                         *
+         **************************************************************************/
+        ANSIc coloredOutput = ANSIc.text(
                 "Blue",
                 ANSIc.text(
                         " ",
@@ -33,13 +35,13 @@ public class EXAMPLES {
                         (char)101,
                         " ",
                         ANSIc.text(" ", 8," ", false," ")
-                                .setTemplate(ANSIc.Color.GREEN,ANSIc.Property.BOLD),
+                                .template(ANSIc.Color.GREEN,ANSIc.Property.BOLD),
                         11
-                ).setTemplate(ANSIc.Color.RED, ANSIc.Background.CYAN),
+                ).template(ANSIc.Color.RED, ANSIc.Background.CYAN),
                 1111
 
         );
-        coloredOutput.setTemplate(ANSIc.Color.BLUE, ANSIc.Property.UNDERLINE);
+        coloredOutput.template(ANSIc.Color.BLUE, ANSIc.Property.UNDERLINE);
         coloredOutput.println();
         /**
          * Save coloredOutput to file to check string...
@@ -51,18 +53,19 @@ public class EXAMPLES {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-        /**
-         * Imperative approach
-         */
+        /***************************************************************************
+         *                                                                         *
+         * Imperative approach                                                     *
+         *                                                                         *
+         **************************************************************************/
         ANSIc.rows(
-                ANSIc.text("Green").setTemplate(ANSIc.Color.GREEN),
+                ANSIc.text("Green").template(ANSIc.Color.GREEN),
                 "START TEXT ",
                 ANSIc.text("Blur ", true),
-                ANSIc.text("is new row ", "yes ",0000,'r',999).setTemplate(ANSIc.Color.RED),
+                ANSIc.text("is new row ", "yes ",0000,'r',999).template(ANSIc.Color.RED),
                 ANSIc.text(
                         "Change color -> ",
-                        ANSIc.text("PURPLE ").setTemplate(ANSIc.Color.PURPLE),
+                        ANSIc.text("PURPLE ").template(ANSIc.Color.PURPLE),
                         11111
                 ),
                 ANSIc.text(
@@ -72,12 +75,14 @@ public class EXAMPLES {
                                 (char)114,
                                 (char)117,
                                 (char)101
-                        ).setTemplate(ANSIc.Color.RED,ANSIc.Property.UNDERLINE)
+                        ).template(ANSIc.Color.RED,ANSIc.Property.UNDERLINE)
                 )
-        ).setTemplate(ANSIc.Color.BLUE).println();
-        /**
-         * Declarative approach
-         */
+        ).template(ANSIc.Color.BLUE).println();
+        /***************************************************************************
+         *                                                                         *
+         * Declarative approach                                                    *
+         *                                                                         *
+         **************************************************************************/
         new ANSIRows(new ANSITemplate(ANSIc.Color.BLUE),
                 new ANSIText(new ANSITemplate(ANSIc.Color.GREEN),"Green"),
                 "START TEXT ",
