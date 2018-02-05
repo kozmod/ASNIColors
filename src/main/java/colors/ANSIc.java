@@ -1,13 +1,21 @@
 package colors;
 
 import java.util.List;
-
+    /**
+     *ANSIc abstract class realizes "System.out.print" logic and containse factory methods to build colored rows and texts.
+     *<br>Also this class contains enumeration of colors, background colors,high intensity, and text propertirs.
+     */
 public abstract class ANSIc {
+    ANSITemplate template;
+    String postfix ;
     /***************************************************************************
      *                                                                         *
      * ENUMS                                                                   *
      *                                                                         *
      **************************************************************************/
+    /**
+     * "Reset" variables.
+     */
     public enum Reset implements ANSITextSetting {
         ALL      ( 0), // RESET ALL SETTINGS
         INTENSITY(22), // RESET INTENSITY
@@ -23,6 +31,9 @@ public abstract class ANSIc {
         }
         private int value;
     }
+    /**
+     * "Background" variables.
+     */
     public enum Background implements ANSITextSetting {
         BLACK (40),  // BLACK
         RED   (41),  // RED
@@ -41,8 +52,10 @@ public abstract class ANSIc {
         }
         private int value;
     }
+    /**
+     * "Regular Color" variables.
+     */
     public enum Color implements ANSITextSetting {
-        // Regular Colors
         BLACK (30),   // BLACK
         RED   (31),   // RED
         GREEN (32),   // GREEN
@@ -59,9 +72,11 @@ public abstract class ANSIc {
             return String.valueOf(value);
         }
         private int value;
-    }
+    }    
+    /**
+     * "High Intensity" variables.
+     */
     public enum THI implements ANSITextSetting {
-        // High Intensity
         BLACK (90),  // BLACK
         RED   (91),  // RED
         GREEN (92),  // GREEN
@@ -79,6 +94,9 @@ public abstract class ANSIc {
         }
         private int value;
     }
+    /**
+     * "Text style (Property)" variables.
+     */
     public enum Property implements ANSITextSetting {
         BOLD       (1), // BOLD
         SEMI_BRIGHT(2), // SEMI-BRIGHT
@@ -94,13 +112,6 @@ public abstract class ANSIc {
         }
         private int value;
     }
-    /***************************************************************************
-     *                                                                         *
-     * Fields                                                                  *
-     *                                                                         *
-     **************************************************************************/
-    ANSITemplate template;
-    String postfix ;
     /***************************************************************************
      *                                                                         *
      * Constructors                                                            *
@@ -167,7 +178,7 @@ public abstract class ANSIc {
     }
     /***************************************************************************
      *                                                                         *
-     * Static Methods                                                          *
+     * Factory Methods (Static)                                                *
      *                                                                         *
      **************************************************************************/
     /**
@@ -202,5 +213,4 @@ public abstract class ANSIc {
     public static ANSIRows rows(Object text){
         return new ANSIRows(text);
     }
-
 }
