@@ -163,7 +163,7 @@ public abstract class ANSIc {
      * @param ansiColorSettings enums of codes
      * @return ANSIc with set template
      */
-    public ANSIc template(ANSITextSetting... ansiColorSettings) {
+    public ANSIc template(ANSITextSetting ... ansiColorSettings) {
         this.template = new ANSITemplate(ansiColorSettings);
         return  this;
     }
@@ -178,7 +178,7 @@ public abstract class ANSIc {
     }
     /***************************************************************************
      *                                                                         *
-     * Factory Methods (Static)                                                *
+     * Factory Methods                                                         *
      *                                                                         *
      **************************************************************************/
     /**
