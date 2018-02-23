@@ -1,11 +1,6 @@
 package colors;
 
 public class ANSIRows extends ANSIText {
-    /***************************************************************************
-     *                                                                         *
-     * Constructors                                                            *
-     *                                                                         *
-     **************************************************************************/
     public ANSIRows(Object text) {
         super(
                 ANSITextSetting.ZERO_WIDTH_SPACE_NEW_LINE,
@@ -32,7 +27,4 @@ public class ANSIRows extends ANSIText {
                 texts
         );
     }
-
-
-
 }
